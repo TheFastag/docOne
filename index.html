@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="app.js"></script>
+</head>
+</head>
+
+<body>
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<h3>Autorización para la Mediación de Propiedades Inmobiliarias</h3>
+				<hr>
+					<form id="form">
+						<div class="row mb-3">
+							<div class="col-md-4">
+								<label for="dia" class="form-label">Playa del Carmen, Q.Roo a: </label>
+									<select class="form-select" id="dia">
+										<option value="">Seleccionar día</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+								</select>
+							</div>
+						<div class="col-md-4">
+							<label for="mes" class="form-label">del mes: </label>
+								<select class="form-select" id="mes">
+									<option value="">Seleccionar mes</option>
+									<option value="Enero">Enero</option>
+									<option value="Febrero">Febrero</option>
+									<option value="Marzo">Marzo</option>
+									<option value="Abril">Abril</option>
+									<option value="Mayo">Mayo</option>
+									<option value="Junio">Junio</option>
+									<option value="Julio">Julio</option>
+									<option value="Agosto">Agosto</option>
+									<option value="Septiembre">Septiembre</option>
+									<option value="Octubre">Octubre</option>
+									<option value="Noviembre">Noviembre</option>
+									<option value="Diciembre">Diciembre</option>
+							</select>
+						</div>	
+						<div class="col-md-4">
+							<label for="año:" class="form-label">del año:</label>
+								<input type="text" class="form-control" id="año" maxlength="4">
+						</div>
+						<p></p>
+						<p>Por su conducto y por la presente autorizo a Sergio Arturo Osunza Poot Nombre Comercial Tulum Realtors SA de CV , la promoción del Inmueble de mi Propiedad con las siguientes características:</p>
+						<p><b> que los campos tienen un limite de caracteres definido para mantener el formato del pdf de manera correcta*</b></p>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="inmueble" class="form-label">Tipo de inmueble</label>
+									<input type="text" class="form-control" id="inmueble" maxlength="12">
+							</div>
+							<div class="col-md-6">
+								<label for="operación" class="form-label">Operación</label>
+									<input type="text" class="form-control" id="operacion" maxlength="11">
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="nombreInmueble" class="form-label">Nombre del inmueble</label>
+								<input type="text" class="form-control" id="nombreInmueble" maxlength="25">
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="direccion" class="form-label">Dirección</label>
+									<input type="text" class="form-control" id="direccion" maxlength="18">
+							</div>
+							<div class="col-md-6">
+								<label for="colonia" class="form-label">Colonia</label>
+								<input type="text" class="form-control" id="colonia" maxlength="59" >
+							</div>
+						</div>
+						<div class="mb-3">
+							<label for="descripcion" class="form-label">Descripción</label>
+								<input type="text" class="form-control" id="descripcion" maxlength="17">
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-4">
+								<label for="precio" class="form-label">Precio</label>
+									<input type="text" class="form-control" id="precio" maxlength="15">
+							</div>
+							<div class="col-md-4">
+								<label for="condiciones" class="form-label">Condiciones</label>
+									<input type="text" class="form-control" id="condiciones" maxlength="28">
+							</div>
+							<div class="col-md-4">
+								<label for="comision" class="form-label">Comision</label>
+									<input type="number"  id="cantidad" min="0" max="100">
+								<p>(porcentaje %)</p>
+							</div>
+							<div class="mb-3">
+								<label for="caracteristicas" class="form-label">Características</label>
+									<input type="text" class="form-control" id="caracteristicas" maxlength="77">
+							</div>
+							<div class="mb-3">
+								<label for="documentacion" class="form-label">Documentacion</label> 
+									<input type="text" class="form-control" id="documentacion" maxlength="76">
+							</div>
+							<div class="mb-3">
+								<label for="propietarioinfo" class="form-label">Informacion del propietario</label>
+									<input type="text" class="form-control" id="propietarioinfo" maxlength="70">
+							</div>
+							<div class="col-md-6">
+										<label for="celular" class="form-label">Telefono celular</label>
+											<input type="text" class="form-control" id="celular" maxlength="13">
+							</div>
+							<div class="col-md-6">
+								<label for="correo" class="form-label">Correo electronico</label>
+									<input type="email" class="form-control" id="correo" maxlength="22">
+							</div>
+							<div class="mb-3">
+								<label for="direccionpropietario" class="form-label">Dirección</label>
+									<input type="text" class="form-control" id="direccionpropietario" maxlength="50">
+							</div>
+							
+						<p>En este mismo convenio autorizo la Promoción de mi Propiedad en Medios que la Agencia Inmobiliaria utiliza.</p>
+						<div class="row mb-3">
+							<div class="col-md-4">
+								<input type="checkbox" name="pagina" id="paginas"> Pagina web
+							</div>
+							<div class="col-md-4">
+								<input type="checkbox" name="letrero"> Letrero en la propiedad
+							</div>
+							<div class="col-md-4">
+								<input type="checkbox" name="otrasAgencias"> Con otras agencias
+							</div>
+							<div class="col-md-4">
+								<input type="checkbox" name="referidos"> Referidos
+							</div>
+							
+						</div>
+						<p>El pago de comisiones se hará en el momento en que se firmen las operaciones y el propietario nos autoriza por este mismo medio solicitarle al cliente llevar el cheque de las comisiones de la inmobiliaria por separado.</p>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="propietario" class="form-label">Nombre propietario</label>
+									<input type="text" class="form-control" id="propietario" maxlength="25">
+										<p></p>
+                                        <span class="d-block pb-2"><b>Firma*</b></span>
+								<div class="signature mb-2" style="width: 100%; height: 200px;">
+									<canvas id="canvas1" style="border: 1px dashed black; width: 100%; height: 200px;"></canvas>		
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="agente" class="form-label">Nombre agente</label>
+									<input type="text" class="form-control" id="agente" maxlength="25">
+										<p></p>									
+                                        <span class="d-block pb-2"><b>Firma*</b></span>
+								<div class="signature mb-2" style="width: 100%; height: 200px;">
+									<canvas id="canvas2" style="border: 1px dashed black; width: 100%; height: 200px;"></canvas>
+								</div>
+							</div>
+						</div>
+						<p></p>
+                        <div  class="col-md-6">
+                            <div class="signature mb-2" style="width: 100%; height: 200px;">
+                                <canvas id="canvas3" style="border: 1px dashed black; width: 100%; height: 200px;"></canvas>		
+                            </div>      
+                        </div>
+                        <div  class="col-md-6">
+                            <div class="signature mb-2" style="width: 100%; height: 200px;">
+                                <p>Nota: Tratar de llenar el recuadro completo al firmar</p>	
+                            </div>      
+                        </div>
+						<span class="d-block pb-2"></span>
+						
+                        <span class="d-block pb-2"><b>Firma*</b></span>
+						<p>Sergio Osunza</p>
+						<p>Representante Legal de Tulum Realtors SA de CV</p>
+						<p></p>
+						<b>*Revisar que los datos capturados sean correctos antes y despues de generar el documento PDF*</b>
+                        <p></p>
+						<button type="submit" class="btn btn-primary"> Descargar como PDF</button>
+					</form>
+			</div>
+		</div>
+	</div>			
+
+
+
+</body>
+</html>
